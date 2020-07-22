@@ -10,5 +10,14 @@ def test_string_false():
 def test_string_length():
     assert string_gen.string_gen != len(5) == False
 
-def test_string_case():
-    assert string_gen.string_gen if any(x.isupper for x in string_gen) == False
+def test_string():
+    assert isinstance(string_gen.string_gen(), str) == True
+
+def test_length():
+    assert len(string_gen.string_gen()) == 5
+
+def test_lower_case():
+    assert string_gen.string_gen().islower() == True
+
+def test_upper_case():
+    assert string_gen.string_gen().isupper() == False
